@@ -9,9 +9,12 @@ class Candidate < ActiveRecord::Base
   scope :by_id, lambda{ |id| where("id = ?", id) unless id.nil? }
   scope :by_region_id, lambda{ |region_id| where("region_id = ?", region_id) unless region_id.nil? }
   scope :by_province_id, lambda{ |province_id| joins(:region).where("regions.province_id = ?", province_id) unless province_id.nil? }
+  scope :by_endorsement_type, lambda{ |endorsement_type| where("endorsement_type = ?", endorsement_type) unless endorsement_type.nil? }
+  scope :by_vote_type, lambda{ |vote_type| where("vote_type = ?", vote_type) unless vote_type.nil? }
+  scope :by_incumbent, lambda{ |incumbent| where("incumbent = ?", incumbent) unless incumbent.nil? }
 
   def self.apiall(data = {})
-    candidates          = self.by_id(data[:id]).by_region_id(data[:region_id]).by_province_id(data[:province_id])
+    candidates          = self.by_id(data[:id]).by_region_id(data[:region_id]).by_province_id(data[:province_id]).by_endorsement_type(data[:endorsement_type]).by_vote_type(data[:vote_type]).by_incumbent(data[:incumbent])
     paginate_candidates = candidates.limit(setlimit(data[:limit])).offset(data[:offset])
 
     return {
