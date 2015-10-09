@@ -1,7 +1,7 @@
 # Candidate PILKADA Surabaya EndPoint
-[![Build Status](https://api.travis-ci.org/plataformatec/candidate-pilkada-surabaya-endpoint.svg?branch=master)](http://travis-ci.org/plataformatec/candidate-pilkada-surabaya-endpoint)
-[![Code Climate](https://codeclimate.com/github/plataformatec/candidate-pilkada-surabaya-endpoint.svg)](https://codeclimate.com/github/plataformatec/candidate-pilkada-surabaya-endpoint)
-[![Security](https://hakiri.io/github/plataformatec/candidate-pilkada-surabaya-endpoint/master.svg)](https://hakiri.io/github/plataformatec/candidate-pilkada-surabaya-endpoint/master)
+[![Build Status](https://api.travis-ci.org/pemiluAPI/candidate-pilkada-surabaya-endpoint.svg?branch=master)](http://travis-ci.org/pemiluAPI/candidate-pilkada-surabaya-endpoint)
+[![Code Climate](https://codeclimate.com/github/pemiluAPI/candidate-pilkada-surabaya-endpoint.svg)](https://codeclimate.com/github/pemiluAPI/candidate-pilkada-surabaya-endpoint)
+[![Security](https://hakiri.io/github/pemiluAPI/candidate-pilkada-surabaya-endpoint/master.svg)](https://hakiri.io/github/pemiluAPI/candidate-pilkada-surabaya-endpoint/master)
 
 ## How to setup
 1. `$ bundle install`
