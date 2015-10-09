@@ -1,7 +1,5 @@
 # Candidate PILKADA Surabaya EndPoint
-[![Build Status](https://api.travis-ci.org/pemiluAPI/candidate-pilkada-surabaya-endpoint.svg?branch=master)](http://travis-ci.org/pemiluAPI/candidate-pilkada-surabaya-endpoint)
-[![Code Climate](https://codeclimate.com/github/pemiluAPI/candidate-pilkada-surabaya-endpoint.svg)](https://codeclimate.com/github/pemiluAPI/candidate-pilkada-surabaya-endpoint)
-[![Security](https://hakiri.io/github/pemiluAPI/candidate-pilkada-surabaya-endpoint/master.svg)](https://hakiri.io/github/pemiluAPI/candidate-pilkada-surabaya-endpoint/master)
+[![Code Climate](https://codeclimate.com/github/pemiluAPI/candidate-pilkada-surabaya-endpoint.png)](https://codeclimate.com/github/pemiluAPI/candidate-pilkada-surabaya-endpoint)
 
 ## How to setup
 1. `$ bundle install`
