@@ -22,7 +22,7 @@ class Region < ActiveRecord::Base
   def construct
     return {
       id: id,
-      province: (province.construct if province),
+      province: handle(province),
       name: name,
       kind: kind
     }
@@ -31,6 +31,10 @@ class Region < ActiveRecord::Base
 protected
   def self.setlimit(limit)
     limit = (limit.to_i == 0 || limit.empty?) ? 1000 : limit
+  end
+
+  def handle(obj)
+    obj.present? ? obj.construct : {}
   end
 
 end

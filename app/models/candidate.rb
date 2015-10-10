@@ -28,7 +28,7 @@ class Candidate < ActiveRecord::Base
     return {
     	id: id,
     	participants: participants.map {|value| value.construct},
-    	region: (region.construct if region),
+    	region: handle(region),
     	endorsement_type: endorsement_type,
     	endorsement: endorsement,
     	vote_type: vote_type,
@@ -51,6 +51,10 @@ class Candidate < ActiveRecord::Base
 protected
   def self.setlimit(limit)
     limit = (limit.to_i == 0 || limit.empty?) ? 1000 : limit
+  end
+
+  def handle(obj)
+    obj.present? ? obj.construct : {}
   end
 
 end
