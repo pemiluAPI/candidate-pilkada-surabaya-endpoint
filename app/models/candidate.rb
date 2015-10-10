@@ -11,7 +11,7 @@ class Candidate < ActiveRecord::Base
   scope :by_province_id, lambda{ |province_id| joins(:region).where("regions.province_id = ?", province_id) unless province_id.nil? }
   scope :by_endorsement_type, lambda{ |endorsement_type| where("LOWER(endorsement_type) = ?", endorsement_type.downcase) unless endorsement_type.nil? }
   scope :by_vote_type, lambda{ |vote_type| where("LOWER(vote_type) = ?", vote_type.downcase) unless vote_type.nil? }
-  scope :by_incumbent, lambda{ |incumbent| where("LOWER(incumbent) = ?", incumbent.downcase) unless incumbent.nil? }
+  scope :by_incumbent, lambda{ |incumbent| where("LOWER(incumbent) = ?", (incumbent.downcase == 'true' ? "ya" : "")) unless incumbent.nil? }
 
   def self.apiall(data = {})
     candidates          = self.by_id(data[:id]).by_region_id(data[:region_id]).by_province_id(data[:province_id]).by_endorsement_type(data[:endorsement_type]).by_vote_type(data[:vote_type]).by_incumbent(data[:incumbent])
